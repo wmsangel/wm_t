@@ -54,14 +54,13 @@ gulp.task('clean:dist', function(){
 })
 
 // Run
-gulp.task('watch', gulp.series('browserSync', 'sass', function() {
+gulp.task('watch', ['browserSync', 'sass'], function(){
     gulp.watch('app/scss/**/*.scss', ['sass']);
     gulp.watch('app/*.html', browserSync.reload);
-}));
-gulp.task('build', gulp.series(function() {
+})
+gulp.task('build', function(callback){
     runSequence('clean:dist', ['sass', 'useref', 'images', 'fonts'],callback)
-}));
-gulp.task('default', gulp.series(function() {
+})
+gulp.task('default', function(callback){
     runSequence(['sass', 'browserSync', 'watch'], callback)
-}));
-
+})
