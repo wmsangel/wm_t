@@ -1,4 +1,354 @@
+/* Fonts
+-----------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=cyrillic");
+/* Main
+-----------------------------*/
 body {
-  color: black;
-  font-size: 20px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0; }
+
+* {
+  box-sizing: border-box; }
+  *:after, *:before {
+    content: ''; }
+
+a {
+  color: #345996;
+  text-decoration: none; }
+
+.wrapper {
+  max-width: 768px;
+  margin: 0 auto; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  font-size: 70px;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
   text-align: center; }
+
+/* Header
+-----------------------------*/
+header {
+  width: 100%;
+  height: 79px;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  border-bottom: 1px solid #ccc; }
+  header nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center; }
+    header nav ul li a {
+      padding: 31px 38px;
+      font-weight: 300;
+      font-size: 14px;
+      display: block; }
+      header nav ul li a.active {
+        color: #161616; }
+
+/* Main
+-----------------------------*/
+main {
+  position: relative;
+  padding-top: 115px;
+  margin-top: 79px; }
+  main:before {
+    height: 160px;
+    background: url("../images/background.jpg") no-repeat top;
+    background-size: cover;
+    background-attachment: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1; }
+  main:after {
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, white 100%);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 );
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 110px;
+    z-index: 2; }
+  main h1:first-of-type {
+    position: relative;
+    z-index: 3; }
+
+/* Form
+-----------------------------*/
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 72px 0 0 0; }
+  fieldset .form-title-icon {
+    display: block;
+    margin: 0 auto; }
+  fieldset .form-title {
+    font-size: 30px;
+    font-weight: 300;
+    padding: 26px 0 50px;
+    text-align: center; }
+  fieldset .form-item {
+    width: 518px;
+    display: block;
+    margin: 0 auto 25px;
+    position: relative; }
+    fieldset .form-item__field {
+      width: 100%;
+      height: 58px;
+      border: 1px solid #dadada;
+      border-radius: 5px;
+      text-align: center;
+      color: #000;
+      font-size: 24px;
+      font-weight: 400; }
+      fieldset .form-item__field::placeholder {
+        color: #c9c9c9; }
+      fieldset .form-item__field-select {
+        -webkit-appearance: none;
+        display: block;
+        width: 318px;
+        margin: 0 auto;
+        background: #fff;
+        text-align-last: center; }
+        fieldset .form-item__field-select option:first-child {
+          color: #c9c9c9; }
+      fieldset .form-item__field-textarea {
+        width: 519px;
+        height: 178px;
+        padding: 19px;
+        text-align-last: left;
+        text-align: left;
+        font-size: 20px; }
+        fieldset .form-item__field-textarea option:first-child {
+          color: #c9c9c9; }
+    fieldset .form-item-slider-range {
+      position: relative; }
+    fieldset .form-item__field-select--icon {
+      position: absolute;
+      top: 30px;
+      right: 130px; }
+      fieldset .form-item__field-select--icon:before {
+        width: 11px;
+        height: 2px;
+        background: #345996;
+        display: block;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 0;
+        left: -6px; }
+      fieldset .form-item__field-select--icon:after {
+        width: 11px;
+        height: 2px;
+        background: #345996;
+        display: block;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 0;
+        left: 0; }
+    fieldset .form-item-radio, fieldset .form-item-checkbox {
+      display: flex;
+      flex-wrap: wrap; }
+      fieldset .form-item-radio label, fieldset .form-item-checkbox label {
+        width: 33.3%;
+        margin-bottom: 15px;
+        font-size: 16px;
+        font-weight: 300; }
+        fieldset .form-item-radio label input, fieldset .form-item-checkbox label input {
+          -webkit-appearance: none;
+          border: 1px solid #42649d;
+          border-radius: 5px;
+          width: 18px;
+          height: 17px;
+          margin: -3px 7px 0 0;
+          display: inline-block;
+          vertical-align: middle;
+          outline: none; }
+          fieldset .form-item-radio label input:checked:before, fieldset .form-item-checkbox label input:checked:before {
+            width: 6px;
+            height: 1px;
+            background: #345996;
+            display: block;
+            transform: rotate(63deg);
+            position: relative;
+            top: 8px;
+            left: 3px;
+            z-index: 5; }
+          fieldset .form-item-radio label input:checked:after, fieldset .form-item-checkbox label input:checked:after {
+            width: 9px;
+            height: 1px;
+            background: #345996;
+            display: block;
+            transform: rotate(-60deg);
+            position: relative;
+            top: 6px;
+            left: 5px;
+            z-index: 5; }
+    fieldset .form-item__button {
+      background: #345996;
+      color: #fff;
+      min-width: 114px;
+      height: 49px;
+      border: none;
+      font-size: 16px;
+      font-weight: 300;
+      text-align: center;
+      border-radius: 10px;
+      margin: 0 auto;
+      display: block;
+      cursor: pointer;
+      transition: all .3s linear; }
+      fieldset .form-item__button:hover {
+        opacity: .8;
+        transition: all .3s linear; }
+  fieldset#about .form-title {
+    padding-bottom: 20px; }
+  fieldset#about p {
+    margin: 0 0 40px;
+    text-align: center;
+    font-weight: 300; }
+  fieldset#button {
+    padding: 40px 0 70px; }
+  fieldset#javascript .js-value {
+    display: flex;
+    position: relative;
+    top: 16px; }
+    fieldset#javascript .js-value__name {
+      width: 25%;
+      font-size: 13px;
+      font-weight: 300;
+      align-self: flex-end;
+      position: relative; }
+      fieldset#javascript .js-value__name:last-of-type {
+        text-align: right; }
+        fieldset#javascript .js-value__name:last-of-type:before {
+          display: none; }
+        fieldset#javascript .js-value__name:last-of-type:after {
+          border-right: 1px dotted #b4b4b4;
+          height: 20px;
+          width: 1px;
+          position: absolute;
+          bottom: -22px;
+          right: 0;
+          z-index: 2; }
+      fieldset#javascript .js-value__name:before {
+        border-left: 1px dotted #b4b4b4;
+        height: 20px;
+        width: 1px;
+        position: absolute;
+        bottom: -22px;
+        left: 0;
+        z-index: 2; }
+  fieldset#javascript .irs-min,
+  fieldset#javascript .irs-max,
+  fieldset#javascript .irs-single {
+    display: none; }
+  fieldset#javascript .irs-line {
+    background: #e7e7e7;
+    border: none;
+    border-radius: 0;
+    height: 14px; }
+  fieldset#javascript .irs-bar {
+    background: #d7b2f4;
+    background: -moz-linear-gradient(left, #d7b2f4 0%, #345996 100%);
+    background: -webkit-linear-gradient(left, #d7b2f4 0%, #345996 100%);
+    background: linear-gradient(to right, #d7b2f4 0%, #345996 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d7b2f4', endColorstr='#345996',GradientType=1 );
+    border: none;
+    border-radius: 0;
+    height: 14px; }
+  fieldset#javascript .js-skew-block {
+    border-color: yellow blue transparent white;
+    border-style: solid;
+    border-width: 0 0 13px 768px;
+    height: 0;
+    width: 0;
+    bottom: 19px;
+    position: absolute;
+    z-index: 1; }
+  fieldset#javascript .irs-handle {
+    width: 1px;
+    height: 26px;
+    border: none;
+    box-shadow: none;
+    top: 43px; }
+    fieldset#javascript .irs-handle i {
+      background: url("../images/js-slider-marker.png") no-repeat;
+      width: 23px;
+      height: 26px;
+      top: 0;
+      left: -11px;
+      border: none;
+      transform: none; }
+      fieldset#javascript .irs-handle i:nth-child(3), fieldset#javascript .irs-handle i:nth-child(2) {
+        display: none; }
+
+/* Mobile menu
+-----------------------------*/
+@media (min-width: 769px) {
+  #javascript .form-item-radio,
+  .mobile-menu {
+    display: none; } }
+
+@media (max-width: 768px) {
+  fieldset .form-item-radio label {
+    width: 100%; }
+  .form-item-slider-range {
+    display: none; }
+  .wrapper {
+    padding: 0 20px; }
+  header nav ul {
+    display: none;
+    position: absolute;
+    left: 59px;
+    background: #fff;
+    top: 20px;
+    z-index: 1;
+    border: 1px solid #ececec; }
+    header nav ul li a {
+      padding: 10px 15px; }
+  .mobile-menu {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #ececec;
+    position: absolute;
+    left: 20px;
+    top: 21px; }
+    .mobile-menu i {
+      width: 22px;
+      height: 2px;
+      background: #ccc;
+      display: block;
+      margin: 7px auto; } }
+
+@media (max-width: 640px) {
+  fieldset .form-item-checkbox label {
+    width: 50%; } }
+
+@media (max-width: 560px) {
+  fieldset .form-item__field-textarea,
+  fieldset .form-item__field-select,
+  fieldset .form-item {
+    width: 100%; }
+  fieldset .form-item__field-select--icon {
+    right: 20px; } }
+
+@media (max-width: 480px) {
+  fieldset .form-item-checkbox label {
+    width: 100%; } }
