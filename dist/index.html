@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Тестовое задание. Анкета.</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
+
+
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <div class="wrapper">
+        <nav>
+            <ul>
+                <li><a href="#personal" class="personal-menu__link active">Личная информация</a></li>
+                <li><a href="#experience" class="exp-menu__link">Опыт</a></li>
+                <li><a href="#javascript" class="js-menu__link ">JavaScript</a></li>
+                <li><a href="#about" class="about-menu__link ">О себе</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <i></i>
+                <i></i>
+                <i></i>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+<!-- Content -->
+<main>
+    <div class="wrapper">
+        <h1>Анкета</h1>
+
+        <form action="">
+            <!-- Личная информация -->
+            <fieldset id="personal">
+                <img src="images/icon__personal-info.png" alt="" class="form-title-icon">
+                <div class="form-title">Личная информация</div>
+
+                <div class="form-item">
+                    <input type="text" name="fio" placeholder="ФИО" class="form-item__field">
+                </div>
+                <div class="form-item">
+                    <div class="form-item__field-select--icon"></div>
+                    <select name="birthday" class="form-item__field form-item__field-select">
+                        <option value="" disabled selected>Год рождения</option>
+                        <option value="1988">1988</option>
+                        <option value="1989">1989</option>
+                        <option value="1990">1990</option>
+                        <option value="1991">1991</option>
+                        <option value="1992">1992</option>
+                        <option value="1993">1993</option>
+                        <option value="1994">1994</option>
+                        <option value="1995">1995</option>
+                        <option value="1996">1996</option>
+                        <option value="1997">1997</option>
+                        <option value="1998">1998</option>
+                        <option value="1999">1999</option>
+                        <option value="2000">2000</option>
+                        <option value="2001">2001</option>
+                        <option value="2002">2002</option>
+                        <option value="2003">2003</option>
+                    </select>
+                </div>
+                <div class="form-item">
+                    <input type="text" name="location" placeholder="Место проживания" class="form-item__field">
+                </div>
+                <div class="form-item">
+                    <input type="text" name="skype" placeholder="Skype" class="form-item__field">
+                </div>
+                <div class="form-item">
+                    <input type="text" name="e-mail" placeholder="E-mail" class="form-item__field">
+                </div>
+            </fieldset>
+
+
+            <!-- Расскажите о своем опыте -->
+            <fieldset id="experience">
+                <img src="images/icon__expirience.png" alt="" class="form-title-icon">
+                <div class="form-title">Расскажите о своем опыте</div>
+
+                <div class="form-item-checkbox">
+                    <label><input type="checkbox" name="expirience" value="БЭМ/OOCSS"> БЭМ/OOCSS</label>
+                    <label><input type="checkbox" name="expirience" value="Верстаю семантично"> Верстаю семантично</label>
+                    <label><input type="checkbox" name="expirience" value="БЭМ/OOCSS"> Webpack</label>
+                    <label><input type="checkbox" name="expirience" value="Stylus/LESS/SASS"> Stylus/LESS/SASS</label>
+                    <label><input type="checkbox" name="expirience" value="ES2015/ES2016"> ES2015/ES2016</label>
+                    <label><input type="checkbox" name="expirience" value="Stylus/LESS/SASS"> jQuery</label>
+                    <label><input type="checkbox" name="expirience" value="Работаю с SVG"> Работаю с SVG</label>
+                    <label><input type="checkbox" name="expirience" value="БЭМ/OOCSS"> Gulp/GRUNT</label>
+                    <label><input type="checkbox" name="expirience" value="Работаю с SVG"> Ипользую Git</label>
+                </div>
+            </fieldset>
+
+
+            <!-- Расскажите о своем опыте -->
+            <fieldset id="javascript">
+                <img src="images/icon__js.png" alt="" class="form-title-icon">
+                <div class="form-title">Уровень владения JavaScript</div>
+
+                <div class="form-item-slider-range">
+                    <div class="js-value">
+                        <div class="js-value__name">Не владею</div>
+                        <div class="js-value__name">Использую готовые<br> решения</div>
+                        <div class="js-value__name">Использую готовые решения<br> и умею и переделывать</div>
+                        <div class="js-value__name">Пишу сложный JS с нуля</div>
+                    </div>
+                    <div class="js-skew-block"></div>
+                    <input type="text" class="js-range-slider" name="my_range" value="" />
+                </div>
+
+                <div class="form-item-radio">
+                    <label><input type="radio" name="js" value="Не владею"> БЭМ/OOCSS</label>
+                    <label><input type="radio" name="js" value="Использую готовые решения"> Использую готовые решения</label>
+                    <label><input type="radio" name="js" value="Использую готовые решения и умею и переделывать"> Использую готовые решения и умею и переделывать</label>
+                    <label><input type="radio" name="js" value="Пишу сложный JS с нуля"> Пишу сложный JS с нуля</label>
+                </div>
+
+            </fieldset>
+
+
+            <!-- Расскажите о своем опыте -->
+            <fieldset id="about">
+                <img src="images/icon__about.png" alt="" class="form-title-icon">
+                <div class="form-title">Расскажите о себе</div>
+                <p>Напишите несколько предложений, чем привлекла наша вакансия<br> и что вы ожидаете от работы у нас.</p>
+
+                <div class="form-item">
+                    <textarea class="form-item__field form-item__field-textarea" name="about" id="" cols="30" rows="10" placeholder="Понравилась тем, что..."></textarea>
+                </div>
+            </fieldset>
+
+
+            <!-- Отправляем -->
+            <fieldset id="button">
+                <div class="form-item">
+                    <input type="submit" class="form-item__button" value="Готово">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</main>
+
+
+</body>
+</html>
